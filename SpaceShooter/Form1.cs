@@ -137,7 +137,7 @@ namespace SpaceShooter
                 enemyMunitions[i] = new PictureBox();
                 enemyMunitions[i].Size = new Size(2, 25);
                 enemyMunitions[i].Visible = false;
-                enemyMunitions[i].BackColor = Color.Red;
+                enemyMunitions[i].BackColor = Color.DodgerBlue;
                 int z = rnd.Next(0, 10);
                 enemyMunitions[i].Location = new Point(enemies[z].Location.X, enemies[z].Location.Y - 20);
                 this.Controls.Add(enemyMunitions[i]);
@@ -311,6 +311,7 @@ namespace SpaceShooter
                     {
                         level += 1;
                         lvllabel.Text = (level < 10) ? "0" + level.ToString() : level.ToString();
+                        LaserColor(level);
 
                         if (enemiesSpeed <= 10 && enemyMunitionsSpeed <= 10 && difficulty >= 0)
                         {
@@ -412,27 +413,67 @@ namespace SpaceShooter
             Environment.Exit(1);
         }
 
-
-        /*private void MoveBackground_Tick(object sender, EventArgs e)
-        {
-            string backgroundImagePath = GetBackgroundImagePath(level);
-            BackgroundImage = Image.FromFile(backgroundImagePath);
-
-            // Rest of your background movement code
-        }*/
-
-        private string GetBackgroundImagePath(int level)
+        private void LaserColor(int level)
         {
             switch (level)
             {
                 case 2:
-                    return @"assets/background1.jpg";
+                    foreach (PictureBox munition in enemyMunitions)
+                    {
+                        munition.BackColor = Color.Red;
+                    }
+                    break;
+
                 case 3:
-                    return @"assets/background2.jpg";
+                    foreach (PictureBox munition in enemyMunitions)
+                    {
+                        munition.BackColor = Color.Yellow;
+                    }
+                    break;
+                case 4:
+                    foreach (PictureBox munition in enemyMunitions)
+                    {
+                        munition.BackColor = Color.Magenta;
+                    }
+                    break;
+                case 5:
+                    foreach (PictureBox munition in enemyMunitions)
+                    {
+                        munition.BackColor = Color.LightSeaGreen;
+                    }
+                    break;
+                case 6:
+                    foreach (PictureBox munition in enemyMunitions)
+                    {
+                        munition.BackColor = Color.OrangeRed;
+                    }
+                    break;
+                case 7:
+                    foreach (PictureBox munition in enemyMunitions)
+                    {
+                        munition.BackColor = Color.Aquamarine;
+                    }
+                    break;
+                case 8:
+                    foreach (PictureBox munition in enemyMunitions)
+                    {
+                        munition.BackColor = Color.DarkSalmon;
+                    }
+                    break;
+                case 9:
+                    foreach (PictureBox munition in enemyMunitions)
+                    {
+                        munition.BackColor = Color.DarkViolet;
+                    }
+                    break;
                 default:
-                    return @"assets/default_background.jpg";
+                    foreach (PictureBox munition in enemyMunitions)
+                    {
+                        munition.BackColor = Color.DodgerBlue;
+                    }
+                    break;
+                
             }
         }
-
     }
 }
