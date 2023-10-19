@@ -1,0 +1,5 @@
+C:\Users\klous\Desktop\repos\SpaceShooter\SpaceShooter.exe
+C:\Users\klous\Desktop\repos\SpaceShooter\SpaceShooter.dll
+C:\Users\klous\Desktop\repos\SpaceShooter\SpaceShooter.deps.json
+C:\Users\klous\Desktop\repos\SpaceShooter\SpaceShooter.runtimeconfig.json
+C:\Users\klous\Desktop\repos\SpaceShooter\SpaceShooter.pdb
