@@ -222,6 +222,7 @@ namespace SpaceShooter
                     DownMove.Start();
                 }
             }
+            
         }
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
@@ -356,6 +357,10 @@ namespace SpaceShooter
             MoveEnemies.Stop();
             MoveMunitions.Stop();
             EnemyMunitions.Stop();
+            RightMove.Stop();
+            LeftMove.Stop();
+            UpMove.Stop();
+            DownMove.Stop();
         }
 
         private void StartTimers()
